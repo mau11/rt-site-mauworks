@@ -1,0 +1,43 @@
+our @CustomFields = (
+    {
+        Name        => 'Craft',
+        Type        => 'SelectSingle',
+        LookupType  => 'RT::Queue-RT::Ticket', # for Tickets
+        RenderType  => 'Dropdown',
+        Values      => [
+            { Name => 'Crochet', Description => '' },
+            { Name => 'Knit', Description => '' },
+            { Name => 'Both', Description => '' },
+        ],
+    },
+);
+
+our @Groups = (
+    {
+        Name => 'Customers',
+        Description => 'purchased an item or received as a gift',
+    },
+);
+
+our @Queues = (
+    {
+        Name              => 'Support',
+        Description       => 'Questions, comments, concerns',
+        CorrespondAddress => 'admin@mauworks.com',
+        CommentAddress    => 'admin@mauworks.com',
+    },
+    {
+        Name              => 'Orders',
+        Description       => 'tracking purchased Mau Works items',
+        CorrespondAddress => 'orders@mauworks.com',
+        CommentAddress    => 'orders@mauworks.com',
+        Lifecycle         => 'orders',
+    },
+    {
+        Name              => 'Gifts',
+        Description       => 'tracking gifts',
+        CorrespondAddress => 'admin@mauworks.com',
+        CommentAddress    => 'admin@mauworks.com',
+        Lifecycle         => 'orders',
+    },
+);
