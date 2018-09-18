@@ -6,18 +6,15 @@ our $VERSION = '0.01';
 
 =head1 NAME
 
-RT-Site-MauWorks - [One line description of module's purpose here]
+RT-Site-MauWorks
 
 =head1 DESCRIPTION
 
-[Why would someone install this extension? What does it do? What problem
-does it solve?]
+Track orders for all Mau Works purchases and gifts
 
 =head1 RT VERSION
 
-Works with RT [What versions of RT is this known to work with?]
-
-[Make sure to use requires_rt and rt_too_new in Makefile.PL]
+Works with RT 4.4
 
 =head1 INSTALLATION
 
