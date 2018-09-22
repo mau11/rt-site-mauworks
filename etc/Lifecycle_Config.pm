@@ -31,6 +31,7 @@ Set( %Lifecycles,
             'open -> canceled'      => { label  => 'Cancel',  update => 'Respond' }, # loc{label}
             'waiting -> open'       => { label  => 'Open',                        }, # loc{label}
             'in-progress -> shipped'=> { label  => 'Ship',    update => 'Respond' }, # loc{label}
+            'shipped -> completed'  => { label  => 'Complete',update => 'Respond' }, # loc{label}
             'completed -> open'     => { label  => 'Re-open', update => 'Comment' }, # loc{label}
             'canceled -> open'      => { label  => 'Re-open', update => 'Comment' }, # loc{label}
             'deleted -> open'       => { label  => 'Undelete',                    }, # loc{label}        ],
