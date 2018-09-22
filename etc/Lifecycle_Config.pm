@@ -35,5 +35,25 @@ Set( %Lifecycles,
             'canceled -> open'      => { label  => 'Re-open', update => 'Comment' }, # loc{label}
             'deleted -> open'       => { label  => 'Undelete',                    }, # loc{label}        ],
         },
-    }
+    },
+    __maps__ => {
+        'orders -> default' => {
+            'new'           => 'new',
+            'open'          => 'open',
+            'in-progress'   => 'open',
+            'waiting'       => 'stalled',
+            'shipped'       => 'open',
+            'completed'     => 'resolved',
+            'canceled'      => 'rejected',
+            'deleted'       => 'deleted',
+        },
+        'default -> orders' => {
+            'new'           => 'new',
+            'open'          => 'open',
+            'stalled'       => 'waiting',
+            'resolved'      => 'completed',
+            'rejected'      => 'canceled',
+            'deleted'       => 'deleted',
+        },
+    },
 );
