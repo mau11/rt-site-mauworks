@@ -1,0 +1,17 @@
+<& /SelfService/Elements/Header, Title => loc('Open orders') &>
+
+% $m->callback(CallbackName => 'BeforeMyRequests', ARGSRef => \%ARGS, Page => $Page);
+
+<& /SelfService/Elements/MyRequests,
+    %ARGS,
+    status  => '__Active__',
+    title   => loc('My open orders'),
+    BaseURL => RT->Config->Get('WebPath') ."/SelfService/?",
+    Page    => $Page, 
+&>
+
+% $m->callback(CallbackName => 'AfterMyRequests', ARGSRef => \%ARGS, Page => $Page);
+
+<%ARGS>
+$Page => 1
+</%ARGS>

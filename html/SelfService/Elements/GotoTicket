@@ -1,0 +1,3 @@
+<form action="<% RT->Config->Get('WebPath') %>/SelfService/Display.html" method="get" id="GotoTicket" name="GotoTicket">
+</form>
+<input name="id" class="field" placeholder="<&|/l&>Go to Ticket</&>..." type="search"/>

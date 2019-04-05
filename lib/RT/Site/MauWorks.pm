@@ -4,6 +4,9 @@ package RT::Site::MauWorks;
 
 our $VERSION = '0.01';
 
+# Add css files to the @CSSFiles config
+RT->AddStyleSheets('main.css');
+
 =head1 NAME
 
 RT-Site-MauWorks

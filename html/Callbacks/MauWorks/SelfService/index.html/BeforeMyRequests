@@ -1,0 +1,11 @@
+<%INIT>
+use Data::Printer colored => 1;
+my $test = 'RUNNING';
+p( $test );
+
+
+</%INIT>
+
+<%ARGS>
+$ARGSRef
+</%ARGS>

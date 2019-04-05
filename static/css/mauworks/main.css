@@ -1,0 +1,10 @@
+@import "../rudder/main.css";
+
+#topactions #simple-search #GotoTicket .field {
+    margin-left: 1em;
+    color: #787;
+}
+
+#topactions #simple-search #GotoTicket .field:focus {
+    color: #000
+}
